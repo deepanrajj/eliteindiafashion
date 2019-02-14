@@ -1,0 +1,66 @@
+
+<div *ngIf="landingModel" class="eirow row">
+    <div class="col-md-12 col-lg-4 col-xl-4">
+        <section class="eioverview">
+            <div class="eioverview__inner eioverview__bg1">
+                <div class="eioverview__inner__box clearfix">
+                    <div class="eioverview__inner__box__left">
+                        <div class="eioverview__inner__box__left__icon">
+                                <fa-icon [icon]="['fas', 'store']"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="eioverview__inner__box__right">
+                        <div class="eioverview__inner__box__right__text">
+                            <h2>{{landingModel.totalinstock}}</h2>
+                            <div>IN STOCK</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-12 col-lg-4 col-xl-4">
+        <section class="eioverview">
+            <div class="eioverview__inner eioverview__bg2">
+                <div class="eioverview__inner__box clearfix">
+                    <div class="eioverview__inner__box__left">
+                        <div class="eioverview__inner__box__left__icon">
+                                <fa-icon [icon]="['fas', 'shopping-bag']"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="eioverview__inner__box__right">
+                        <div class="eioverview__inner__box__right__text">
+                            <h2>{{landingModel.totalsold}}</h2>
+                            <div>SOLD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="col-md-12 col-lg-4 col-xl-4">
+        <section class="eioverview">
+            <div class="eioverview__inner eioverview__bg3">
+                <div class="eioverview__inner__box clearfix">
+                    <div class="eioverview__inner__box__left">
+                        <div class="eioverview__inner__box__left__icon">
+                                <fa-icon [icon]="['fas', 'tshirt']"></fa-icon>
+                        </div>
+                    </div>
+                    <div class="eioverview__inner__box__right">
+                        <div class="eioverview__inner__box__right__text">
+                            <h2>{{landingModel.totalbrands}}</h2>
+                            <div>BRANDS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<ng-container *ngIf="landingModel">
+    <app-eitablelistdata [totalproducts]="landingModel.totalproducts" class="eirow row"></app-eitablelistdata>
+</ng-container>

@@ -1,0 +1,56 @@
+
+
+<div *ngIf="productsModel" class="eirow row">
+  
+  <div class="eimodal modal fade" id="eimodal" tabindex="-1" role="dialog" aria-labelledby="eiFashionModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" (click)="modalClicked = false;" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <app-eifashiondetailsmodal *ngIf="modalClicked" [productid]="productid"></app-eifashiondetailsmodal>
+      </div>
+    </div>
+  </div>
+
+
+  <ng-container *ngFor="let product of productsModel">
+    <div class="col-md-4">
+      <a class="eiproduct" data-toggle="modal" data-target="#eimodal" (click)="modalClicked = true; productid = product.uid">
+        <div class="eiproduct__link">
+          <div class="eiproduct__link__img">
+            <img *ngIf="product.imagesrc" src="{{product.imagesrc}}" alt=""/>
+            <div class="eiproduct__link__img__type">{{product.producttype | uppercase}}</div>
+            <ng-container *ngIf="product.stocklevel">
+              <div *ngFor="let level of product.stocklevel; let i= index;" class="eiproduct__link__img__banner{{i}}">
+                <img src="../../assets/img/{{level}}.png" alt="{{level}}">
+              </div>
+            </ng-container>
+            <!--div class="eiproduct__link__img__banner1">
+              <img src="../../assets/img/outofstock.png" alt="bestseller">
+            </div>
+            <div class="eiproduct__link__img__banner2">
+              <img src="../../assets/img/lowstock.png" alt="bestseller">
+            </div>
+            <div class="eiproduct__link__img__banner3">
+              <img src="../../assets/img/bestseller.png" alt="bestseller">
+            </div-->
+          </div>
+          <div class="eiproduct__link__detail">
+            <h4>{{product.productname}}</h4>
+            <h5>{{product.brand}}</h5>
+            <ng-container *ngIf="product.stock">
+              <div *ngFor="let stockdetail of product.stock" [className]="stockdetail.stock > 10 ? 'eiproduct__link__detail__cont' : 'eiproduct__link__detail__contlow'">
+                <div class="eiproduct__link__detail__cont__size">{{stockdetail.size}}</div>
+                <div class="eiproduct__link__detail__cont__stock">{{stockdetail.stock}}</div>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </a>
+    </div>
+  </ng-container>
+</div>

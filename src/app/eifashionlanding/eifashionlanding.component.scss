@@ -1,0 +1,84 @@
+/* Landing - Main Components */
+
+%box-shared {
+    display: table-cell;
+    vertical-align: top;
+}
+.eirow {
+    margin: 0;
+
+    .eioverview {
+        border-left: 5px solid rgba(62, 61, 61, 0.84);
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-bottom: 20px;
+        border-radius: 4px;
+
+        &__bg1 {
+            background: linear-gradient(90deg, #6b83f9 0%, #fc466b 100%);
+        }
+
+        &__bg2 {
+            background: linear-gradient(90deg, #45b649 0%, #dce35b 100%);        
+        }
+
+        &__bg3 {
+            background: linear-gradient(90deg, #23A6D5 0%, #23D5AB 100%);            
+        }
+
+        &__inner {
+            -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 0 5px 5px 0;
+            padding: 15px;
+
+            &__box {
+                display: table;
+                width: 100%;
+                color: #fff;
+
+                &__left {
+                    @extend %box-shared;
+                    width: 1%;
+
+                    &__icon {
+                        margin-right: 35px;
+                        font-size: 70px;
+                        width: 90px;
+                        height: 90px;
+                        line-height: 90px;
+                        text-align: center;
+                    }
+                }
+
+                &__right {
+                    @extend %box-shared;
+
+                    &__text {
+                        min-height: 75px;
+                        word-break: break-all;  
+                        cursor: default;              
+
+                        h2 {
+                            margin: 15px 0 0 0;
+                            font-size: 40px;
+                            line-height: 30px;
+                            color: #1e1e27;
+                            font-family: 'Poppins-SemiBold', sans-serif;
+                            text-shadow: 3px 2px 5px rgba(24, 25, 25, 0.47843);                 
+                        }
+
+                        div {
+                            font-size: 18px;
+                            line-height: 30px;
+                            padding: 10px 0 0 0;
+                            text-shadow: 3px 2px 5px rgba(24, 25, 25, 0.47843); 
+                            font-family: 'Poppins-Medium', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

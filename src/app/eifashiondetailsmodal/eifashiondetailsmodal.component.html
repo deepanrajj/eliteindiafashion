@@ -1,0 +1,39 @@
+
+<div *ngIf="productModel" class="modal-body eimb">
+  <div class="eimb__type-ribbon"><span>{{productModel.producttype | titlecase}}</span></div>
+
+  <div class="row eimb__row">
+    <div class="col-md-5 eimb__row__image">
+      <img src="{{productModel.imagesrc}}" alt="{{productModel.productname}}">
+    </div>
+    <div class="col-md-7 eimb__row__detail">
+      <h4>{{productModel.productname}}</h4>
+      <h5>{{productModel.brand}}</h5>
+      <div *ngIf="productModel.color" class="eimb__row__detail__color">
+        <span>Color:</span>
+        <ul>
+          <li *ngFor="let colordetail of productModel.color" [className]="colordetail.empty ? 'color-empty' : ''" [ngStyle]="{'background': colordetail.color}"></li>
+        </ul>
+      </div>
+      <div *ngIf="productModel.stock" class="eimb__row__detail__size">
+        <span>Size:</span>
+        <ul>
+          <li *ngFor="let detail of productModel.stock"><button  [className]="detail.stock > 10  ? 'btn' : (detail.stock != 0 ? 'btn btnwarning' : 'btn btnempty')" type="submit">{{detail.size}}</button></li>
+        </ul>
+      </div>
+      <div *ngIf="productModel.stock" class="eimb__row__detail__stock">
+        <span>Detail:</span>
+        <div class="eimb__row__detail__stock__header">
+          <div class="eimb__row__detail__stock__header__size">Size</div>
+          <div class="eimb__row__detail__stock__header__stock">Stock</div>
+          <div class="eimb__row__detail__stock__header__sold">Sold</div>
+        </div>
+        <div *ngFor="let detail of productModel.stock" [className]="detail.sold > 35 ? (detail.stock == 0 ? 'cont contbest contempty' : 'cont contbest') : (detail.stock > 10 ? 'cont' : (detail.stock == 0 ? 'cont contempty' : 'cont'))">
+          <div class="cont__size">{{detail.size}}</div>
+          <div class="cont__stock">{{detail.stock}}</div>
+          <div class="cont__sold">{{detail.sold}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

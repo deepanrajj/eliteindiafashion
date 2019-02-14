@@ -1,0 +1,15 @@
+@import 'styles-variables';
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/normalize-scss/sass/normalize.scss';
+@import 'styles-reset';
+
+
+body {
+    background: #e1e1e1;
+    display: table;
+    font-size: 14px;
+    width: 100%;
+    color: #1e1e27;
+    font-family: 'Poppins', sans-serif;
+}

@@ -1,0 +1,30 @@
+/* User Panel */
+
+.eiuseractions {
+    position: inherit;
+    float: right;
+
+    &__profile {
+        float: right;
+        line-height: 3.5;
+        padding: 0 20px;
+        position: relative;
+        font-weight: 500;
+
+        &__adduser {
+            color: #343a40;
+        }
+
+        &__image {          
+            margin-right: 10px;
+            width: 45px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    }
+
+    &__profile:last-child
+    {
+        border-right: 1px solid #cac6c6;
+    }
+}

@@ -1,0 +1,199 @@
+.eimb {
+    padding: 0 0 45px;
+
+    &__type-ribbon {        
+        position: absolute;
+        top: -50px;
+        left: 40px;
+        z-index: 1;
+        text-transform: uppercase;
+        color: white;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 65px solid transparent;
+            border-right: 65px solid transparent;
+            border-top: 10px solid #57a1f3;
+        }
+
+        span {
+            position: relative;
+            display: block;
+            text-align: center;
+            background: #57a1f3;
+            font-size: 16px;
+            line-height: 1;
+            padding: 10px 8px 5px;
+            border-top-right-radius: 8px;
+            width: 130px;
+
+            &:before, &:after {
+                position: absolute;
+                content: "";
+            }
+
+            &:before {
+                height: 6px;
+                width: 6px;
+                left: -6px;
+                top: 0;
+                background: #57a1f3;
+            }
+
+            &:after {
+                height: 6px;
+                width: 8px;
+                left: -8px;
+                top: 0;
+                border-radius: 8px 8px 0 0;
+                background: #1357a2;
+            }
+        }
+
+
+    }
+
+    &__row {
+        margin: 0;
+
+        &__image {
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__detail {
+
+            h4 {
+                margin: 0 0 3px;
+                font-size: 20px;
+                font-family: 'Poppins-SemiBold', sans-serif;               
+            }
+
+            h5 {
+                font-size: 18px;
+                margin: 0;               
+            }
+
+            &__color {
+                margin-top: 30px;
+
+                .color-empty {
+                    opacity: 0.2;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+
+                ul {
+                    display: inline-block;
+                    margin-left: 0;
+                    padding-left: 15px;
+
+                    li {
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        margin-right: 25px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__size {
+                margin-top: 5px;
+
+                span {
+                    font-size: 16px;
+                }
+
+                ul {
+                    display: inline-block;
+                    margin-left: 0;
+                    padding-left: 15px;
+
+                    li {
+                        display: inline-block;
+                        margin-right: 25px;
+                        cursor: pointer;
+
+                        button {
+                            background: #d8e9fa;
+                            padding: 10px 25px;
+                        }
+
+                        .btnwarning {
+                            background: #ff8b3d;
+                        }
+
+                        .btnempty {
+                            background: #ffaaaa;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+
+            &__stock {
+                margin-top: 5px;
+
+                span {
+                    font-size: 16px;
+                }
+
+                .cont, &__header {
+                    display: table;
+                    width: 60%;
+                    margin: 5px 20px;
+                    font-size: 16px;
+
+                    &__size {
+                        display: table-cell;
+                        width : 33%;
+                        text-align: center;
+                    }
+
+                    &__stock {
+                        display: table-cell;
+                        width : 33%;
+                        text-align: center;
+                    }
+
+                    &__sold {
+                        display: table-cell;
+                        text-align: center;
+                    }
+                }
+
+                &__header {
+                    font-family: 'Poppins-SemiBold', sans-serif;
+                    margin-bottom: 8px;
+                }
+
+                .contbest {
+                    font-family: 'Poppins-Medium', sans-serif;
+                    color: #48b348;
+                }
+
+                .contempty {
+                    font-family: 'Poppins-Medium', sans-serif;
+                    color: #e01a1a;                    
+                }
+
+                .contbest.contempty {
+                    
+                    div:first-child {
+                        color: #48b348;
+                    }                   
+                }               
+            }
+        }
+    }
+}

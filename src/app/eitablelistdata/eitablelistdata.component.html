@@ -1,0 +1,28 @@
+<!-- Checking @Input totalproducts is present and iterating the product map-->
+<ng-container *ngIf="totalproducts">
+  <ng-container *ngFor="let product of totalproducts | keyvalue:desc">
+    <div class="col-lg-6">
+      <div class="eitable">
+        <div class="eitable__header">{{product.key}}</div>
+        
+        <table class="eitable__main" cellspacing="0">
+          <tr class="eitable__main__row">
+            <th class="eitable__main__row__header">Size</th>
+            <th class="eitable__main__row__header">Instock</th>
+            <th class="eitable__main__row__header">Sold</th>
+          </tr>
+
+          <!-- Iterating the product stock detail map-->
+          <ng-container *ngFor="let productdetail of product.value | keyvalue:desc">
+            <tr class="eitable__main__row">
+              <td class="eitable__main__row__detail">{{productdetail.key}}</td>
+              <td class="eitable__main__row__detail">{{productdetail.value?.instock}}</td>
+              <td class="eitable__main__row__detail">{{productdetail.value?.sold}}</td>
+            </tr>
+          </ng-container>
+
+        </table>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

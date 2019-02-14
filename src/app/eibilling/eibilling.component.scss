@@ -1,0 +1,106 @@
+.eiform {
+
+    .eiclear {
+        clear: both;
+    }
+    
+    input[type='text'], input[type='email'] {
+        width: 70%;
+        display: block;
+        padding: 10px 0px 10px 10px;
+        border-radius: 5px;                    
+        box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.2);
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+        color: #6E6E6E;
+    }
+
+    a.eibutton {
+        background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+        border-radius: 50%;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+        float: left;
+        height: 50px;
+        width: 50px;    
+        margin-top: -5px;
+        -webkit-transition: all .1s linear;
+        transition: all .1s linear;
+    }
+
+    &__name {
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 10px 0;
+        font-family: 'Poppins-SemiBold';
+        font-size: 20px;
+    }
+
+    &__cont {
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #DADDE8;
+        border-radius: 5px;
+        padding: 30px;
+        margin-bottom: 100px;
+
+        &__section {
+
+            &__header {
+
+                &__title {
+                    user-select: none;
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 36px;
+                    border-radius: 50px;
+                    border: 2px solid #646E8A;
+                    text-align: center;
+                    color: #646E8A;
+                }
+
+                span {
+                    font-size: 18px;
+                    color: #646E8A;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-left: 15px;
+                }
+            }
+
+            &__form {
+                color: #A4A9C5;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                padding: 10px 50px 20px;
+
+                &__field {
+                    margin-top: 20px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &__fieldbutton {
+                    margin-top: 20px;
+
+                    label {
+                        display: block;
+                        margin-bottom: 10px;
+                    }
+
+                    input[type='text'] {
+                        width: 30%;
+                        float: left;
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

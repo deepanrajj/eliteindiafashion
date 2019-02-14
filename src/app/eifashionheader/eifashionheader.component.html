@@ -1,0 +1,31 @@
+<!-- Left Panel - Navigation -->
+<nav class="einavigation navbar navbar-inverse navbar-twitch" role="navigation">
+    <div class="container">
+      
+        <div class="einavigation__header navbar-header">
+            <a class="einavigation__header__brand navbar-brand" href="./"><img class="einavigation__header__brand__logo" src="../../assets/img/eifashionlogo.png" alt="Logo"></a>
+        </div>
+
+        <div id="einavigation__menu" class="einavigation__menu">
+            <ul class="einavigation__menu__nav nav navbar-nav">
+    
+                <li class="einavigation__menu__nav__item nav-item" [ngClass]="{'active': selectedItem == 'home'}">
+                    <a class="einavigation__menu__nav__item__link" routerLink="eifashionlanding" (click)="listClick('home')"><fa-icon class="einavigation__menu__nav__item__link__icon" [icon]="['fas', 'tachometer-alt']"></fa-icon></a>
+                </li>
+                <li class="einavigation__menu__nav__item nav-item" [ngClass]="{'active': selectedItem == 'products'}">
+                    <a class="einavigation__menu__nav__item__link" routerLink="products" (click)="listClick('products')"><fa-icon class="einavigation__menu__nav__item__link__icon" [icon]="['fas', 'shopping-basket']"></fa-icon></a>
+                </li>
+                <li class="einavigation__menu__nav__item nav-item" [ngClass]="{'active': selectedItem == 'billing'}">
+                    <a class="einavigation__menu__nav__item__link" routerLink="billing" (click)="listClick('billing')"><fa-icon class="einavigation__menu__nav__item__link__icon" [icon]="['fas', 'cart-plus']"></fa-icon></a>
+                </li>
+                <li class="einavigation__menu__nav__item nav-item" [ngClass]="{'active': selectedItem == 'update'}">
+                    <a class="einavigation__menu__nav__item__link" href="index.html" (click)="listClick('update')"><fa-icon class="einavigation__menu__nav__item__link__icon" [icon]="['fas', 'edit']"></fa-icon></a>
+                </li>
+                <li class="einavigation__menu__nav__item nav-item" [ngClass]="{'active': selectedItem == 'delete'}">
+                    <a class="einavigation__menu__nav__item__link" href="index.html" (click)="listClick('delete')"><fa-icon class="einavigation__menu__nav__item__link__icon" [icon]="['fas', 'trash-alt']"></fa-icon></a>
+                </li>
+                
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
